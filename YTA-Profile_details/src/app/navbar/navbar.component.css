@@ -1,0 +1,45 @@
+.nav{
+    margin-left: 10px;
+    margin-top: 22.5px;
+    float: right;
+    margin-right: 49px;
+    color: #718096;
+    
+
+}
+
+.search{
+    width: 199px;
+
+    float: right;
+    margin-top: -3px;
+    background: #FFFFFF;
+    border: 0.5px solid #E2E8F0;
+    border-radius: 8px;
+    color: #A0AEC0
+
+}
+
+.user-i{
+    margin-right: 5.15px;
+    margin-left: 19.12px;
+}
+
+.signin-text{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    align-items: center;
+    margin-right: 5.75px;
+}
+
+.setting-i{
+    margin-left: 5.75px;
+    margin-right: 19.25px;
+}
+
+.notification-i{
+    margin-right: 49px;
+}
