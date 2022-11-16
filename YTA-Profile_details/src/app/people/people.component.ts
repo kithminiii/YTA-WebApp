@@ -20,7 +20,8 @@ export class PeopleComponent implements OnInit {
     email: '',
     confirm: '',
     location: '',
-    pno: ''
+    pno: '',
+    function: ''
   };
 
   message = '';

@@ -1,0 +1,129 @@
+/* box css */
+.box-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#box3 {
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+
+#box5 {
+  flex-grow: 1;
+  border-radius: 16px;
+  height: 113px;
+  background-color: #FFFFFF;
+}
+
+#box8 {
+  flex-grow: 1;
+  border-radius: 16px;
+  height: 80px;
+  width: 80px;
+  background-color: #000;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.pro-pic {
+  text-align: left;
+  width: 88px;
+  height: 88px;
+}
+
+.name {
+  margin-left: 20px;
+  width: 200px;
+  font-weight: 700;
+  font-size: 18px;
+  list-style: none;
+}
+
+.role {
+  margin-left: 20px;
+  width: 155.5px;
+  list-style: none;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #718096;
+}
+
+#box6 {
+  flex-grow: 1;
+  border-radius: 16px;
+  height: 559px;
+  background-color: #FFFFFF;
+}
+
+.middle-column {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-column div {
+  flex-grow: 1;
+  margin: 0 8px;
+}
+
+.middle-column div+div {
+  margin-top: 8px
+}
+
+/* form */
+.basic {
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.info {
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 80px;
+}
+
+td {
+  text-align: left;
+}
+
+.txt {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  color: #2D3748;
+}
+
+.inp {
+  width: 50%;
+  height: 80px;
+  background: #FFFFFF;
+  border: 0.5px solid #cdd3da;
+  border-radius: 8px;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+
+}

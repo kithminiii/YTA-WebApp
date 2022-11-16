@@ -16,39 +16,78 @@
           <button type="button" class="btn btn-active">ACTIVE</button>
           <button type="button" class="btn btn-deactive">DEACTIVATED</button>
       </div>
-      <!--<div class="card text-center">
+      <div class="card text-center">
         <div class="card-body">
           <table class="table table-hover">
             <thead>
               <tr class="tr-d">
                 <th scope="col">NAME</th>
                 <th scope="col">FUNCTION</th>
-                <th scope="col">REVIEW</th>
+                <th scope="col">DEPARTMENT</th>
+                <th scope="col">LINE MANAGER</th>
                 <th scope="col">EMAIL</th>
-                <th scope="col">EMPLOYED</th>
-                <th scope="col">ID</th>
+                <th scope="col">TELEPHONE</th>
               </tr>
             </thead>
             <tbody>
               <tr class="t-data">
                 <td class="name-d">
                   <div class="row">
-                    <div class="col-2 mt-7">
+                    <!--<div class="col-2 mt-7">
                       <img class="user" src="../../../assets/Images/name1.png" />
-                    </div>
-                    <div class="col-10">Esthera Jackson</div>
+                    </div>-->
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.image }} {{ tutorial.image }}</div>
                   </div>
                 </td>
-                <td class="function-d">Manager</td>
-                <td class="review-d">
-                      <div class="status-dot-positive"></div>
-                      <p class="status-text">Positive</p>
+                <td class="name-d">
+                  <div class="row">
+                    <!--<div class="col-2 mt-7">
+                      <img class="user" src="../../../assets/Images/name1.png" />
+                    </div>-->
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.first }} {{ tutorial.last }}</div>
+                  </div>
                 </td>
-                <td class="email-d">esthera@simmmple.com</td>
-                <td class="edate-d">14/06/21</td>
-                <td class="id-d">32124</td>
+                <td class="name-d">
+                  <div class="row">
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.function }}</div>
+                  </div>
+                </td>
+                <td class="name-d">
+                  <div class="row">
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.im }}</div>
+                  </div>
+                </td>
+                <td class="name-d">
+                  <div class="row">
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.location }}</div>
+                  </div>
+                </td>
+                <td class="name-d">
+                  <div class="row">
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.email }}</div>
+                  </div>
+                </td>
+                <td class="name-d">
+                  <div class="row">
+                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
+                    [class.active]="i == currentIndex"
+                    (click)="setActiveTutorial(tutorial, i)">{{ tutorial.pno }}</div>
+                  </div>
+                </td>
               </tr>
-              <tr class="t-data">
+              <!--<tr class="t-data">
                 <td class="name-d">
                   <div class="row">
                     <div class="col-2 mt-7">
@@ -137,18 +176,24 @@
                 <td class="email-d">esthera@simmmple.com</td>
                 <td class="edate-d">14/06/21</td>
                 <td class="id-d">32124</td>
-              </tr>
+              </tr>-->
             </tbody>
           </table>
         </div>
-      </div>-->
+      </div>
+    </div>
+    <div>
+      <app-people
+        [viewMode]="true"
+        [currentTutorial]="currentTutorial"
+      ></app-people>
     </div>
   </div>
 
-  <div class="list row">
-    <div class="col-md-6">
+  <!--<div>
+    <div>
       <h4>People List</h4>
-      <ul class="list-group">
+      <ul>
         <li
           class="list-group-item"
           *ngFor="let tutorial of tutorials; let i = index"
@@ -157,14 +202,22 @@
         >
           {{ tutorial.first }}
         </li>
+        <li
+          class="list-group-item"
+          *ngFor="let tutorial of tutorials; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveTutorial(tutorial, i)"
+        >
+          {{ tutorial.last }}
+        </li>
       </ul>
     </div>
-    <div class="col-md-6">
+    <div>
       <app-people
         [viewMode]="true"
         [currentTutorial]="currentTutorial"
       ></app-people>
     </div>
-  </div>
+  </div>-->
 
 

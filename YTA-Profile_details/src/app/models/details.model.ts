@@ -9,4 +9,6 @@ export class Details {
   location?: string;
   pno?: string;
   lang?: string;
+  function?: string;
+  image?: string;
 }

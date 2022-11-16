@@ -125,7 +125,7 @@
       </div>
     </div> -->
 
-    <div *ngIf="viewMode; else editable">
+    <div *ngIf="viewMode">
       <div *ngIf="currentTutorial.id">
         <h4>Details</h4>
         <div>
@@ -163,137 +163,18 @@
         <!--<div>
           <label><strong>Status:</strong></label>
           {{ currentTutorial.published ? "Published" : "Pending" }}
-        </div>-->
+        </div>
 
         <a
           class="badge badge-warning"
           routerLink="/tutorials/{{ currentTutorial.id }}"
         >
           Edit
-        </a>
+        </a>-->
       </div>
 
       <div *ngIf="!currentTutorial">
         <br />
-        <p>Please click on a Tutorial...</p>
+        <p>Error...</p>
       </div>
     </div>
-
-    <ng-template #editable>
-      <div *ngIf="currentTutorial.id" class="edit-form">
-        <h4>Tutorial</h4>
-        <form>
-          <div class="form-group">
-            <label for="first">First</label>
-            <input
-              type="text"
-              class="form-control"
-              id="first"
-              [(ngModel)]="currentTutorial.first"
-              name="first"
-            />
-          </div>
-          <div class="form-group">
-            <label for="last">Last</label>
-            <input
-              type="text"
-              class="form-control"
-              id="last"
-              [(ngModel)]="currentTutorial.last"
-              name="last"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="im">I'm</label>
-            <input
-              type="text"
-              class="form-control"
-              id="im"
-              [(ngModel)]="currentTutorial.im"
-              name="im"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="birth">Birth</label>
-            <input
-              type="text"
-              class="form-control"
-              id="birth"
-              [(ngModel)]="currentTutorial.birth"
-              name="birth"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="text"
-              class="form-control"
-              id="email"
-              [(ngModel)]="currentTutorial.email"
-              name="email"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="confirm">Confirm Email</label>
-            <input
-              type="text"
-              class="form-control"
-              id="confirm"
-              [(ngModel)]="currentTutorial.confirm"
-              name="confirm"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="location">Location</label>
-            <input
-              type="text"
-              class="form-control"
-              id="location"
-              [(ngModel)]="currentTutorial.location"
-              name="location"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="pno">Phone Number</label>
-            <input
-              type="text"
-              class="form-control"
-              id="pno"
-              [(ngModel)]="currentTutorial.pno"
-              name="pno"
-            />
-          </div>
-
-          <!--<div class="form-group">
-            <label><strong>Status:</strong></label>
-            {{ currentTutorial.published ? "Published" : "Pending" }}
-          </div>-->
-        </form>
-
-        <!--<button
-          class="badge badge-primary mr-2"
-          *ngIf="currentTutorial.published"
-          (click)="updatePublished(false)"
-        >
-          UnPublish
-        </button>
-        <button
-          *ngIf="!currentTutorial.published"
-          class="badge badge-primary mr-2"
-          (click)="updatePublished(true)"
-        >
-          Publish
-        </button>-->
-      </div>
-
-      <div *ngIf="!currentTutorial.id">
-        <br />
-        <p>Cannot access this Tutorial...</p>
-      </div>
-    </ng-template>
