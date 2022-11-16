@@ -1,15 +1,180 @@
-<h1>Products</h1>
-<div class="card">
-    <div class="card-head">Lorem ipsum - product 1</div>
-    <div class="card-body">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas ducimus soluta, quasi aut ipsa non, ullam enim
-        rem repudiandae, vitae provident animi. Inventore rerum, voluptas optio dignissimos blanditiis modi illo!
+    <!--<div class="card text-center" *ngIf="viewMode; else editable">
+      <div class="card-body" *ngIf="currentTutorial.id">
+        <table class="table table-hover">
+          <thead>
+            <tr class="tr-d">
+              <th scope="col">NAME</th>
+              <th scope="col">FUNCTION</th>
+              <th scope="col">REVIEW</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">EMPLOYED</th>
+              <th scope="col">ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name1.png" />
+                  </div>
+                  <div class="col-10">{{ currentTutorial.first }}</div>
+                </div>
+              </td>
+              <td class="function-d">{{ currentTutorial.last }}</td>
+              <td class="review-d">
+                    <div class="status-dot-positive"></div>
+                    <p class="status-text">{{ currentTutorial.im }}</p>
+              </td>
+              <td class="email-d">{{ currentTutorial.email }}</td>
+              <td class="edate-d">{{ currentTutorial.location }}</td>
+              <td class="id-d">{{ currentTutorial.pno }}</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name2.png" />
+                  </div>
+                  <div class="col-10">Alexa Liras</div>
+                </div>
+              </td>
+              <td class="function-d">Programmer</td>
+              <td class="review-d">
+                  <div class="status-dot-positive"></div>
+                  <p class="status-text">Positive</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name3.png" />
+                  </div>
+                  <div class="col-10">Laurent Michael</div>
+                </div>
+              </td>
+              <td class="function-d">Executive</td>
+              <td class="review-d">
+                <div class="status-dot-neutral"></div>
+                <p class="status-text">Neutral</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name4.png" />
+                  </div>
+                  <div class="col-10">Freduardo Hill</div>
+                </div>
+              </td>
+              <td class="function-d">Manager</td>
+              <td class="review-d">
+                    <div class="status-dot-positive"></div>
+                    <p class="status-text">Positive</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name5.png" />
+                  </div>
+                  <div class="col-10">Daniel Thomas</div>
+                </div>
+              </td>
+              <td class="function-d">Programmer</td>
+              <td class="review-d">
+                <div class="status-dot-negative"></div>
+                <p class="status-text">Negative</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name6.png" />
+                  </div>
+                  <div class="col-10">Mark Wilson</div>
+                </div>
+              </td>
+              <td class="function-d">Designer</td>
+              <td class="review-d">
+                <div class="status-dot-positive"></div>
+                <p class="status-text">Positive</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
+
+    <div *ngIf="viewMode">
+      <div *ngIf="currentTutorial.id">
+        <h4>Details</h4>
+        <div>
+          <label><strong>First:</strong></label>
+          {{ currentTutorial.first }}
+        </div>
+        <div>
+          <label><strong>Last:</strong></label>
+          {{ currentTutorial.last }}
+        </div>
+        <div>
+          <label><strong>I'm:</strong></label>
+          {{ currentTutorial.im }}
+        </div>
+        <div>
+          <label><strong>Birth Date:</strong></label>
+          {{ currentTutorial.birth }}
+        </div>
+        <div>
+          <label><strong>Email:</strong></label>
+          {{ currentTutorial.email }}
+        </div>
+        <div>
+          <label><strong>Confirm Email:</strong></label>
+          {{ currentTutorial.confirm }}
+        </div>
+        <div>
+          <label><strong>Location:</strong></label>
+          {{ currentTutorial.location }}
+        </div>
+        <div>
+          <label><strong>Phone Number:</strong></label>
+          {{ currentTutorial.pno }}
+        </div>
+        <!--<div>
+          <label><strong>Status:</strong></label>
+          {{ currentTutorial.published ? "Published" : "Pending" }}
+        </div>-->
+
+        <a
+          class="badge badge-warning"
+          routerLink="/tutorials/{{ currentTutorial.id }}"
+        >
+          Edit
+        </a>
+      </div>
+
+      <div *ngIf="!currentTutorial">
+        <br />
+        <p>Error...</p>
+      </div>
     </div>
-</div>
-<div class="card">
-    <div class="card-head">Lorem ipsum - product 2</div>
-    <div class="card-body">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas ducimus soluta, quasi aut ipsa non, ullam enim
-        rem repudiandae, vitae provident animi. Inventore rerum, voluptas optio dignissimos blanditiis modi illo!
-    </div>
-</div>

@@ -1,115 +1,299 @@
-<div class="row">
-  <div class="col-sm-12">
+    <!--<div class="card text-center" *ngIf="viewMode; else editable">
+      <div class="card-body" *ngIf="currentTutorial.id">
+        <table class="table table-hover">
+          <thead>
+            <tr class="tr-d">
+              <th scope="col">NAME</th>
+              <th scope="col">FUNCTION</th>
+              <th scope="col">REVIEW</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">EMPLOYED</th>
+              <th scope="col">ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name1.png" />
+                  </div>
+                  <div class="col-10">{{ currentTutorial.first }}</div>
+                </div>
+              </td>
+              <td class="function-d">{{ currentTutorial.last }}</td>
+              <td class="review-d">
+                    <div class="status-dot-positive"></div>
+                    <p class="status-text">{{ currentTutorial.im }}</p>
+              </td>
+              <td class="email-d">{{ currentTutorial.email }}</td>
+              <td class="edate-d">{{ currentTutorial.location }}</td>
+              <td class="id-d">{{ currentTutorial.pno }}</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name2.png" />
+                  </div>
+                  <div class="col-10">Alexa Liras</div>
+                </div>
+              </td>
+              <td class="function-d">Programmer</td>
+              <td class="review-d">
+                  <div class="status-dot-positive"></div>
+                  <p class="status-text">Positive</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name3.png" />
+                  </div>
+                  <div class="col-10">Laurent Michael</div>
+                </div>
+              </td>
+              <td class="function-d">Executive</td>
+              <td class="review-d">
+                <div class="status-dot-neutral"></div>
+                <p class="status-text">Neutral</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name4.png" />
+                  </div>
+                  <div class="col-10">Freduardo Hill</div>
+                </div>
+              </td>
+              <td class="function-d">Manager</td>
+              <td class="review-d">
+                    <div class="status-dot-positive"></div>
+                    <p class="status-text">Positive</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name5.png" />
+                  </div>
+                  <div class="col-10">Daniel Thomas</div>
+                </div>
+              </td>
+              <td class="function-d">Programmer</td>
+              <td class="review-d">
+                <div class="status-dot-negative"></div>
+                <p class="status-text">Negative</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+            <tr class="t-data">
+              <td class="name-d">
+                <div class="row">
+                  <div class="col-2 mt-7">
+                    <img class="user" src="../../../assets/Images/name6.png" />
+                  </div>
+                  <div class="col-10">Mark Wilson</div>
+                </div>
+              </td>
+              <td class="function-d">Designer</td>
+              <td class="review-d">
+                <div class="status-dot-positive"></div>
+                <p class="status-text">Positive</p>
+              </td>
+              <td class="email-d">esthera@simmmple.com</td>
+              <td class="edate-d">14/06/21</td>
+              <td class="id-d">32124</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
 
-    <nav class="nav">
-      <input class="form-control me-2 search" type="search" placeholder="Type here..." aria-label="Search">
-
-      <a><i class="fa fa-user user-i" aria-hidden="true"></i>
-          <span class="signin-text">Sign In</span>
-      </a>
-      <a><i class="fa fa-cog setting setting-i" aria-hidden="true"></i></a>
-      <a><i class="fa fa-bell notification notification-i" aria-hidden="true"></i></a>
-    </nav>
-
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Employees</li>
-        <li class="breadcrumb-item">People</li>
-      </ol>
-    </nav>
-
-  <p class="people-text">Tom Cruise</p>
-
-	<div class="box-wrapper">
-		<div id="box3">
-
-			<div id="box4">
-        <div class="profile-sections">
-          <ul><button class="but"><i class="fa fa-rocket"></i>Basic Info</button></ul>
-          <ul><button class="but"><i class="fa fa-file"></i>Salary Info</button></ul>
-          <ul><button class="but"><i class="fa fa-cube"></i>Job Description</button></ul>
-          <ul><button class="but"><i class="fa fa-user"></i>KPIs</button></ul>
-          <ul><button class="but"><i class="fa fa-user"></i>Appraisals</button></ul>
-          <ul><button class="but"><i class="fa fa-bell"></i>Leave</button></ul>
-          <ul><button class="but"><i class="fa fa-wrench"></i>Employment Timeline</button></ul>
-          <ul><button class="but"><i class="fa fa-circle-xmark"></i>Payroll History</button></ul>
+    <div *ngIf="viewMode; else editable">
+      <div *ngIf="currentTutorial.id">
+        <h4>Details</h4>
+        <div>
+          <label><strong>First:</strong></label>
+          {{ currentTutorial.first }}
         </div>
-			</div>
+        <div>
+          <label><strong>Last:</strong></label>
+          {{ currentTutorial.last }}
+        </div>
+        <div>
+          <label><strong>I'm:</strong></label>
+          {{ currentTutorial.im }}
+        </div>
+        <div>
+          <label><strong>Birth Date:</strong></label>
+          {{ currentTutorial.birth }}
+        </div>
+        <div>
+          <label><strong>Email:</strong></label>
+          {{ currentTutorial.email }}
+        </div>
+        <div>
+          <label><strong>Confirm Email:</strong></label>
+          {{ currentTutorial.confirm }}
+        </div>
+        <div>
+          <label><strong>Location:</strong></label>
+          {{ currentTutorial.location }}
+        </div>
+        <div>
+          <label><strong>Phone Number:</strong></label>
+          {{ currentTutorial.pno }}
+        </div>
+        <!--<div>
+          <label><strong>Status:</strong></label>
+          {{ currentTutorial.published ? "Published" : "Pending" }}
+        </div>-->
 
-			<div class="middle-column">
-				<div id="box5">
-					<div id="box8">
-            <td><img src="assets/Images/Image.png" class="pro-pic"></td>
-            <td>
-              <li class="name">Alec Thompson</li>
-              <li class="role">CEO / Co-Founder</li>
-            </td>
+        <a
+          class="badge badge-warning"
+          routerLink="/tutorials/{{ currentTutorial.id }}"
+        >
+          Edit
+        </a>
+      </div>
+
+      <div *ngIf="!currentTutorial">
+        <br />
+        <p>Please click on a Tutorial...</p>
+      </div>
+    </div>
+
+    <ng-template #editable>
+      <div *ngIf="currentTutorial.id" class="edit-form">
+        <h4>Tutorial</h4>
+        <form>
+          <div class="form-group">
+            <label for="first">First</label>
+            <input
+              type="text"
+              class="form-control"
+              id="first"
+              [(ngModel)]="currentTutorial.first"
+              name="first"
+            />
           </div>
-				</div>
-
-				<div id="box6">
-          <h3 class="basic">Basic Info</h3>
-					<table class="info" *ngIf="!submitted">
-            <tr>
-              <td class="txt">First Name</td>
-              <td class="txt">Last Name</td>
-            </tr>
-            <tr>
-              <td><input type="text" id="first" required [(ngModel)]="details.first" name="first" class="inp" placeholder="eg: Michael"/></td>
-              <td><input type="text" id="last" required [(ngModel)]="details.last" name="last" class="inp" placeholder="eg: Jackson"/></td>
-            </tr>
-            <tr>
-              <td class="txt">I'm</td>
-              <td class="txt">Birth Date</td>
-            </tr>
-            <tr>
-              <td><select name="type" id="im" [ngModelOptions]="{standalone: true}" editable="true" [(ngModel)]="details.im" name="im" class="inp">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              <!--<input type="text" id="im" required [(ngModel)]="details.im" name="im" class="inp" placeholder="eg: Male"/>--></select></td>
-              <td><input type="date" class="inp" id="birth" required [(ngModel)]="details.birth" name="birth"/></td>
-            </tr>
-            <tr>
-              <td class="txt">Email Address</td>
-              <td class="txt">Confirmation Email</td>
-            </tr>
-            <tr>
-              <td><input type="email" id="email" type="text" class="inp" required [(ngModel)]="details.email" name="email" placeholder="eg: example@address.com"/></td>
-              <td><input type="email" id="confirm" required [(ngModel)]="details.confirm" name="confirm" class="inp" placeholder="eg: example@address.com"/></td>
-            </tr>
-            <tr>
-              <td class="txt">Your Location</td>
-              <td class="txt">Phone Number</td>
-            </tr>
-            <tr>
-              <td><input id="location" type="text" required [(ngModel)]="details.location" name="location" class="inp" placeholder="eg: Bucharest"/></td>
-              <td><input id="pno" type="text" required [(ngModel)]="details.pno" name="pno" class="inp" placeholder="+04 941 538 024"/></td>
-            </tr>
-            <tr>
-              <td class="txt">Language</td>
-              <td class="txt">Skills</td>
-            </tr>
-            <tr>
-              <td><select name="lang" id="lang" [ngModelOptions]="{standalone: true}" editable="true" [(ngModel)]="details.lang" name="lang" class="inp">
-                <option value="English">English</option>
-                <option value="Sinhala">Sinhala</option>
-                <option value="Tamil">Tamil</option>
-                <option value="French">French</option>
-              </select></td>
-              <td></td>
-            </tr>
-            <button (click)="saveDetails()" class="btn btn-success">Submit</button>
-          </table>
-
-          <div *ngIf="submitted">
-            <h4>Account updated!</h4>
-            <button class="btn btn-success" (click)="newDetails()">Edit</button>
+          <div class="form-group">
+            <label for="last">Last</label>
+            <input
+              type="text"
+              class="form-control"
+              id="last"
+              [(ngModel)]="currentTutorial.last"
+              name="last"
+            />
           </div>
 
-				</div>
+          <div class="form-group">
+            <label for="im">I'm</label>
+            <input
+              type="text"
+              class="form-control"
+              id="im"
+              [(ngModel)]="currentTutorial.im"
+              name="im"
+            />
+          </div>
 
-			</div>
+          <div class="form-group">
+            <label for="birth">Birth</label>
+            <input
+              type="text"
+              class="form-control"
+              id="birth"
+              [(ngModel)]="currentTutorial.birth"
+              name="birth"
+            />
+          </div>
 
-		</div>
-	</div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [(ngModel)]="currentTutorial.email"
+              name="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm">Confirm Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="confirm"
+              [(ngModel)]="currentTutorial.confirm"
+              name="confirm"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              [(ngModel)]="currentTutorial.location"
+              name="location"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="pno">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="pno"
+              [(ngModel)]="currentTutorial.pno"
+              name="pno"
+            />
+          </div>
+
+          <!--<div class="form-group">
+            <label><strong>Status:</strong></label>
+            {{ currentTutorial.published ? "Published" : "Pending" }}
+          </div>-->
+        </form>
+
+        <!--<button
+          class="badge badge-primary mr-2"
+          *ngIf="currentTutorial.published"
+          (click)="updatePublished(false)"
+        >
+          UnPublish
+        </button>
+        <button
+          *ngIf="!currentTutorial.published"
+          class="badge badge-primary mr-2"
+          (click)="updatePublished(true)"
+        >
+          Publish
+        </button>-->
+      </div>
+
+      <div *ngIf="!currentTutorial.id">
+        <br />
+        <p>Cannot access this Tutorial...</p>
+      </div>
+    </ng-template>

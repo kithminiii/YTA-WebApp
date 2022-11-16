@@ -7,10 +7,10 @@ export const navbarData: INavbarData[] = [
         label: 'Employees',
         items: [
           {
-              routeLink: 'people/people',
+              routeLink: 'list-view',
               icon: 'fa fa-file',
               label: 'People',
-              items: [
+              /*items: [
                 {
                   routeLink:'list-view',
                   icon: 'fa fa-file',
@@ -20,8 +20,13 @@ export const navbarData: INavbarData[] = [
                 routeLink: 'people/detailed-profile-view',
                   icon: 'fa fa-file',
                   label: 'Detailed Profile View'
+              },
+              {
+                routeLink: '',
+                  icon: 'fa fa-file',
+                  label: 'People List'
               }
-            ]
+            ]*/
           },
           {
               routeLink: 'people/teams',

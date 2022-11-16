@@ -15,6 +15,8 @@ import { TeamsComponent } from './teams/teams.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     TeamsComponent,
     SublevelMenuComponent,
     ListViewComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

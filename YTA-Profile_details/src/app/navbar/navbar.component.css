@@ -4,7 +4,7 @@
     float: right;
     margin-right: 49px;
     color: #718096;
-    
+
 
 }
 
@@ -33,6 +33,9 @@
     line-height: 150%;
     align-items: center;
     margin-right: 5.75px;
+    border: none;
+    background-color: #f4f7fa;
+    color: #7c8da3;
 }
 
 .setting-i{
