@@ -10,5 +10,6 @@ export class Details {
   pno?: string;
   lang?: string;
   function?: string;
-  image?: string;
+  department?: string;
+  linemanager?: string;
 }

@@ -15,11 +15,11 @@ export class PeopleComponent implements OnInit {
   @Input() currentTutorial: Details = {
     first: '',
     last: '',
-    im: '',
+    department: '',
     birth: '',
     email: '',
     confirm: '',
-    location: '',
+    linemanager: '',
     pno: '',
     function: ''
   };
