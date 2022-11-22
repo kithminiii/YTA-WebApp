@@ -7,7 +7,7 @@ export const navbarData: INavbarData[] = [
         label: 'Employees',
         items: [
           {
-              routeLink: 'list-view',
+              routeLink: 'list-view-active',
               icon: 'fa fa-file',
               label: 'People',
               /*items: [

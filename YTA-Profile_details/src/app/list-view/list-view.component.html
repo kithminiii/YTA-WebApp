@@ -5,16 +5,16 @@
           <app-navbar></app-navbar>
       </div>
       <div>
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="title">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Employees</li>
                 <li class="breadcrumb-item">People</li>
               </ol>
-            </nav>
+          </nav>
 
           <p class="people-text">People</p>
           <button type="button" class="btn btn-active">ACTIVE</button>
-          <button type="button" class="btn btn-deactive">DEACTIVATED</button>
+          <button type="button" class="btn btn-deactive" routerLink="/list-view-deactive">DEACTIVATED</button>
       </div>
 
       <div class="card text-center">
@@ -22,7 +22,6 @@
           <table class="table">
             <thead>
               <tr class="tr-d">
-                <th></th>
                 <th>NAME</th>
                 <th>Job Title</th>
                 <th>DEPARTMENT</th>
@@ -35,27 +34,9 @@
               <tr class="t-data">
                 <td class="name-d">
                   <div class="detail">
-                    <!--<div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name1.png" />
-                    </div>-->
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActiveTutorial(tutorial, i)">{{ tutorial.first }}
-
-                    </div>
-
-                  </div>
-
-                </td>
-                <td class="name-d">
-                  <div class="detail">
-                    <!--<div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name1.png" />
-                    </div>-->
-                    <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
-                      [class.active]="i == currentIndex"
-                      (click)="setActiveTutorial(tutorial, i)">{{ tutorial.first }} {{ tutorial.last }}
-
+                      (click)="setActiveTutorial(tutorial, i)"><img [src]="tutorial.imagePath" class="user"/>{{ tutorial.first }} {{ tutorial.last }}
                     </div>
                   </div>
                 </td>
@@ -64,7 +45,6 @@
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
                       (click)="setActiveTutorial(tutorial, i)">{{ tutorial.function }}
-
                     </div>
                   </div>
                 </td>
@@ -73,7 +53,6 @@
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
                       (click)="setActiveTutorial(tutorial, i)">{{ tutorial.department }}
-
                     </div>
                   </div>
                 </td>
@@ -82,7 +61,6 @@
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
                       (click)="setActiveTutorial(tutorial, i)">{{ tutorial.linemanager }}
-
                     </div>
                   </div>
                 </td>
@@ -91,7 +69,6 @@
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
                       (click)="setActiveTutorial(tutorial, i)">{{ tutorial.email }}
-
                     </div>
                   </div>
                 </td>
@@ -100,7 +77,6 @@
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
                       (click)="setActiveTutorial(tutorial, i)">{{ tutorial.pno }}
-
                     </div>
                   </div>
                 </td>

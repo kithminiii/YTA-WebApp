@@ -91,7 +91,7 @@
 }
 
 .rec {
-  background: #CB0C9F;
+  background: #FF0030;
   display: flex;
   align-items: center;
   height: 30px;
@@ -116,15 +116,6 @@
 .sidenav-nav-item .sidenav-nav-link:hover {
   background-color: #FFFFFF;
   color: #000;
-}
-
-.active{
-  background-color: #fff;
-}
-
-.active .sidenav-link-icon,
-.active .sidenav-link-text{
-  color: #FFFFFF;
 }
 
 .active-sublevel {

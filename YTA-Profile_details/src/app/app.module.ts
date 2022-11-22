@@ -16,6 +16,7 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { DeactiveComponent } from './deactive/deactive.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginComponent } from './login/login.component';
     SublevelMenuComponent,
     ListViewComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    DeactiveComponent
   ],
   imports: [
     BrowserModule,

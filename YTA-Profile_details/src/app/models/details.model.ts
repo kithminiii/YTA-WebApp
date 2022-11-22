@@ -12,4 +12,5 @@ export class Details {
   function?: string;
   department?: string;
   linemanager?: string;
+  imagePath?: string;
 }

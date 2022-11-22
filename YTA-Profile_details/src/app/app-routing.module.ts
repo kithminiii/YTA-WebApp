@@ -7,6 +7,7 @@ import { PayrollComponent } from './payroll/payroll.component';
 import { HiringComponent } from './hiring/hiring.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { LoginComponent } from './login/login.component';
+import { DeactiveComponent } from './deactive/deactive.component';
 
 
 const routes: Routes = [
@@ -19,8 +20,9 @@ const routes: Routes = [
     loadChildren: () => import('./payroll/payroll.module').then(m => m.CoupensModule)
   },
   {path: 'hiring', component: HiringComponent},
-  {path:'list-view',component:ListViewComponent},
-  {path:'login',component:LoginComponent}
+  {path:'list-view-active',component:ListViewComponent},
+  {path:'login',component:LoginComponent},
+  {path:'list-view-deactive',component:DeactiveComponent}
 ];
 
 @NgModule({

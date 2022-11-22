@@ -1,0 +1,103 @@
+
+.card{
+  background: #FFFFFF;
+  box-shadow: none;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.people-text{
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: #2D3748;
+  margin-left: 30px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.breadcrumb{
+  margin-top: -21px;
+  margin-bottom: 15.5px;
+  margin-left: 30px;
+}
+
+/* active deactivate css */
+.btn-active{
+background: #FFFFFF;
+width: 134.5px;
+margin-bottom: 21px;
+border-radius: 12px;
+padding: 0px, 8px, 0px, 8px;
+box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.06);
+margin-right: 22.5px;
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 150%;
+color: #2D3748;
+}
+
+.btn-deactive{
+margin-bottom: 31px;
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 150%;
+
+}
+
+
+li {
+list-style-type: none;
+}
+
+/* table */
+.table-d{
+  margin-top: 173px;
+}
+
+.tr-d{
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 150%;
+  color: #A0AEC0;
+  text-align: left;
+}
+
+.name-d{
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: #718096;
+  line-height: 50px;
+}
+
+.col-10 {
+text-align: left;
+width: 100%;
+}
+
+/* User Images */
+.user{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #4FD1C5;
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  margin-right: 10px;
+}
+
+hr.new1 {
+border-top: 1px solid #000;
+}
+
