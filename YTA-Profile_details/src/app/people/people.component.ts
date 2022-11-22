@@ -49,4 +49,28 @@ export class PeopleComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+
+  updateTutorial(): void {
+    this.message = '';
+
+    this.tutorialService.update(this.currentTutorial.id, this.currentTutorial)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.message = res.message ? res.message : 'Details was updated successfully!';
+        },
+        error: (e) => console.error(e)
+      });
+  }
+
+  deleteTutorial(): void {
+    this.tutorialService.delete(this.currentTutorial.id)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.router.navigate(['/tutorials']);
+        },
+        error: (e) => console.error(e)
+      });
+  }
 }

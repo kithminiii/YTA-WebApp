@@ -8,7 +8,10 @@ module.exports = mongoose => {
       email: String,
       confirm: String,
       location: String,
-      pno: String
+      pno: String,
+      department: String,
+      linemanager: String,
+      published: Boolean,
     },
     { timestamps: true }
   );

@@ -36,7 +36,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let tutorial of tutorials; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActiveTutorial(tutorial, i)"><img [src]="tutorial.imagePath" class="user"/>{{ tutorial.first }} {{ tutorial.last }}
+                      (click)="setActiveTutorial(tutorial, i)" routerLink="/people/{{ currentTutorial.id }}"><img [src]="tutorial.imagePath" class="user"/>{{ tutorial.first }} {{ tutorial.last }}
                     </div>
                   </div>
                 </td>

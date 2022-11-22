@@ -19,7 +19,10 @@ exports.create = (req, res) => {
     confirm: req.body.confirm,
     location: req.body.location,
     pno: req.body.pno,
-    lang: req.body.lang
+    lang: req.body.lang,
+    department: req.body.department,
+    linemanager: req.body.linemanager,
+    published: req.body.published ? req.body.published : false
   });
 
   // Save Tutorial in the database
@@ -86,7 +89,7 @@ exports.update = (req, res) => {
         res.status(404).send({
           message: `Cannot update Tutorial with id=${id}. Maybe Tutorial was not found!`
         });
-      } else res.send({ message: "Tutorial was updated successfully." });
+      } else res.send({ message: "Details was updated successfully." });
     })
     .catch(err => {
       res.status(500).send({

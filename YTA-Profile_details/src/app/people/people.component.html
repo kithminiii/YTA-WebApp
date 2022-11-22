@@ -1,5 +1,6 @@
-    <div class="box-wrapper" *ngIf="viewMode">
-      <div id="box3" *ngIf="currentTutorial.id">
+    <!-- Profile Details view Form-->
+    <div class="box-wrapper" *ngIf="viewMode; else editable">
+      <div id="box3" *ngIf="currentTutorial.id" >
 
         <div id="box4">
           <div class="profile-sections">
@@ -26,7 +27,9 @@
           </div>
 
           <div id="box6" >
-            <h3 class="basic">Basic Info</h3>
+            <h3 class="basic">Basic Info <button class="btn btn-active" routerLink="/people/{{ currentTutorial.id }}">
+              Edit
+            </button></h3>
             <table class="info" >
               <tr>
                 <td class="txt">First Name</td>
@@ -63,6 +66,8 @@
               <!--<button class="btn btn-success">Submit</button>-->
             </table>
 
+
+
             <!--<div>
               <h4>Account updated!</h4>
               <button class="btn btn-success">Edit</button>
@@ -71,3 +76,123 @@
         </div>
       </div>
     </div>
+
+
+
+    <!-- Proile Edit Form-->
+    <ng-template #editable>
+      <div *ngIf="currentTutorial.id">
+        <div class="middle-column">
+          <div id="edit-box5">
+            <div id="box8">
+              <td><img [src]="currentTutorial.imagePath" class="pro-pic"></td>
+              <td>
+                <li class="name">{{ currentTutorial.first }} {{ currentTutorial.last }}</li>
+                <li class="role">{{ currentTutorial.function }}</li>
+              </td>
+            </div>
+          </div>
+
+          <div id="box6" >
+            <h3 class="basic">Basic Info</h3>
+            <table class="info" >
+              <tr>
+                <td class="txt">First Name</td>
+                <td class="txt">Last Name</td>
+              </tr>
+              <tr>
+                <td><input
+                  type="text"
+                  class="edit-inp"
+                  id="first"
+                  [(ngModel)]="currentTutorial.first"
+                  name="first"
+                /></td>
+                <td><input
+                  type="text"
+                  class="edit-inp"
+                  id="last"
+                  [(ngModel)]="currentTutorial.last"
+                  name="last"
+                /></td>
+              </tr>
+              <tr>
+                <td class="txt">I'm</td>
+                <td class="txt">Birth Date</td>
+              </tr>
+              <tr>
+                <td>
+                  <select
+                  type="text"
+                  class="edit-inp"
+                  id="im"
+                  [(ngModel)]="currentTutorial.im"
+                  name="im">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </td>
+                <td><input
+                  type="date"
+                  class="edit-inp"
+                  id="birth"
+                  [(ngModel)]="currentTutorial.birth"
+                  name="birth"
+                /></td>
+              </tr>
+              <tr>
+                <td class="txt">Email Address</td>
+                <td class="txt">Confirmation Email</td>
+              </tr>
+              <tr>
+                <td><input
+                  type="email"
+                  class="edit-inp"
+                  id="email"
+                  [(ngModel)]="currentTutorial.email"
+                  name="email"
+                /></td>
+                <td><input
+                  type="email"
+                  class="edit-inp"
+                  id="confirm"
+                  [(ngModel)]="currentTutorial.confirm"
+                  name="confirm"
+                /></td>
+              </tr>
+              <tr>
+                <td class="txt">Your Location</td>
+                <td class="txt">Phone Number</td>
+              </tr>
+              <tr>
+                <td><input
+                  type="text"
+                  class="edit-inp"
+                  id="location"
+                  [(ngModel)]="currentTutorial.location"
+                  name="location"
+                /></td>
+                <td><input
+                  type="text"
+                  class="edit-inp"
+                  id="pno"
+                  [(ngModel)]="currentTutorial.pno"
+                  name="pno"
+                /></td>
+              </tr>
+              <!--<button class="btn btn-success">Submit</button>-->
+            </table>
+
+            <button
+              type="submit"
+              class="btn btn-update"
+              (click)="updateTutorial()"
+            >
+              Update
+            </button>
+            <p class="msg">{{ message }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>

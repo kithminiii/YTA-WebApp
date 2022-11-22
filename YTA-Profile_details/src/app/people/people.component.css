@@ -61,6 +61,7 @@ ul {
   color: #000;
 }
 
+/* Profile pic and role */
 #box5 {
   flex-grow: 1;
   border-radius: 16px;
@@ -103,11 +104,15 @@ ul {
   color: #718096;
 }
 
+/* Profile details */
+
 #box6 {
   flex-grow: 1;
   border-radius: 16px;
-  height: 559px;
+  height: 629px;
   background-color: #FFFFFF;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .middle-column {
@@ -133,6 +138,23 @@ ul {
   font-weight: 700;
   font-size: 18px;
   line-height: 60px;
+}
+
+.btn-active {
+  background: #FF0030;
+  width: 74.5px;
+  margin-bottom: 21px;
+  border-radius: 12px;
+  padding: 0px, 8px, 0px, 8px;
+  box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.06);
+  margin-right: 22.5px;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #FFFFFF;
+  float: right;
 }
 
 .info {
@@ -167,6 +189,50 @@ td {
   padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 40px;
+}
+
+/* Update Form */
+
+#edit-box5 {
+  flex-grow: 1;
+  border-radius: 16px;
+  height: 153px;
+  background-color: #FFFFFF;
+}
+
+.btn-update {
+  background: #FF0030;
+  width: 74.5px;
+  margin-top: 21px;
+  margin-left: 20px;
+  border-radius: 12px;
+  padding: 0px, 8px, 0px, 8px;
+  margin-right: 22.5px;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #FFFFFF;
+  float: left;
+}
+
+.info input[type="text"],
+.info input[type="date"],
+.info input[type="email"],
+.info select {
+  width: 90%;
+  height: 40px;
+  background: #FFFFFF;
+  border: 0.5px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #000;
+  padding-left: 10px;
+}
+
+.msg {
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
