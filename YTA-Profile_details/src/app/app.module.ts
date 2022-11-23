@@ -17,6 +17,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { DeactiveComponent } from './deactive/deactive.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DeactiveComponent } from './deactive/deactive.component';
     ListViewComponent,
     NavbarComponent,
     LoginComponent,
-    DeactiveComponent
+    DeactiveComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

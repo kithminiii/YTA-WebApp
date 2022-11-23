@@ -62,15 +62,4 @@ export class PeopleComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
-
-  deleteTutorial(): void {
-    this.tutorialService.delete(this.currentTutorial.id)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.router.navigate(['/tutorials']);
-        },
-        error: (e) => console.error(e)
-      });
-  }
 }
