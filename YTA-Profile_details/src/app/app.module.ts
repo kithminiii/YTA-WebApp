@@ -7,17 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { HiringComponent } from './hiring/hiring.component';
-import { PeopleComponent } from './people/people.component';
-import { TeamsComponent } from './teams/teams.component';
-import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
-import { ListViewComponent } from './list-view/list-view.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
-import { DeactiveComponent } from './deactive/deactive.component';
-import { SignupComponent } from './signup/signup.component';
+import { SidenavComponent } from './Components/sidenav/sidenav.component';
+import { EmployeesComponent } from './Components/employees/employees.component';
+import { HiringComponent } from './Components/hiring/hiring.component';
+import { PeopleComponent } from './Components/people/people.component';
+import { TeamsComponent } from './Components/teams/teams.component';
+import { SublevelMenuComponent } from './Components/sidenav/sublevel-menu.component';
+import { ListViewComponent } from './Components/list-view/list-view.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { LoginComponent } from './Components/login/login.component';
+import { DeactiveComponent } from './Components/deactive/deactive.component';
+import { SignupComponent } from './Components/signup/signup.component';
 
 @NgModule({
   declarations: [

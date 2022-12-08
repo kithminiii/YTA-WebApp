@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Details } from '../models/details.model';
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
+const baseUrl = 'http://localhost:8080/api/peoples';
 
 @Injectable({
   providedIn: 'root'
@@ -39,4 +39,5 @@ export class DetailsService {
   findByTitle(first: any): Observable<Details[]> {
     return this.http.get<Details[]>(`${baseUrl}?first=${first}`);
   }
+
 }

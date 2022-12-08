@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeesComponent } from './employees/employees.component';
-import { PeopleComponent } from './people/people.component';
-import { TeamsComponent } from './teams/teams.component';
-import { PayrollComponent } from './payroll/payroll.component';
-import { HiringComponent } from './hiring/hiring.component';
-import { ListViewComponent } from './list-view/list-view.component';
-import { LoginComponent } from './login/login.component';
-import { DeactiveComponent } from './deactive/deactive.component';
-import { SignupComponent } from './signup/signup.component';
+import { EmployeesComponent } from './Components/employees/employees.component';
+import { PeopleComponent } from './Components/people/people.component';
+import { TeamsComponent } from './Components/teams/teams.component';
+import { HiringComponent } from './Components/hiring/hiring.component';
+import { PayrollComponent } from './Components/payroll/payroll.component';
+import { ListViewComponent } from './Components/list-view/list-view.component';
+import { LoginComponent } from './Components/login/login.component';
+import { DeactiveComponent } from './Components/deactive/deactive.component';
+import { SignupComponent } from './Components/signup/signup.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'employees', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'employees', component: EmployeesComponent},
   { path: 'people/:id', component: PeopleComponent },
   {path: 'statistics', component: TeamsComponent},
   {
     path: 'payroll',
-    loadChildren: () => import('./payroll/payroll.module').then(m => m.CoupensModule)
+    loadChildren: () => import('../app/Components/payroll/payroll.module').then(m => m.CoupensModule)
   },
   {path: 'hiring', component: HiringComponent},
   {path:'list-view-active',component:ListViewComponent},
