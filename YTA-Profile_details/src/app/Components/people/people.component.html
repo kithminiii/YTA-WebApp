@@ -85,7 +85,7 @@
 
     <!-- Proile Edit Form-->
     <ng-template #editable>
-      <div class="box-wrapper">
+      <div class="box-wrapper" *ngIf="isLoggedIn">
         <div id="box3" *ngIf="currentPeople.id" >
 
           <div id="box4">

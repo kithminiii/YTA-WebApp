@@ -46,6 +46,7 @@ import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/
 import { Router } from '@angular/router';
 import { fadeInOut, INavbarData } from './helper';
 import { navbarData } from './nav-data';
+import { StorageService } from 'src/app/services/storage.service';
 
 interface SideNavToggle {
   screenWidth: number;
@@ -85,6 +86,8 @@ interface SideNavToggle {
 })
 export class SidenavComponent implements OnInit {
 
+  isLoggedIn = false;
+
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
   screenWidth = 0;
@@ -100,10 +103,11 @@ export class SidenavComponent implements OnInit {
     }
   }
 
-  constructor(public router: Router) {}
+  constructor(public router: Router, private storageService: StorageService) {}
 
   ngOnInit(): void {
       this.screenWidth = window.innerWidth;
+      this.isLoggedIn = this.storageService.isLoggedIn();
   }
 
   toggleCollapse(): void {

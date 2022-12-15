@@ -52,11 +52,6 @@
 
 }
 
-
-li {
-  list-style-type: none;
-}
-
 /* table */
 .table-d{
     margin-top: 173px;
@@ -80,6 +75,7 @@ li {
     line-height: 140%;
     color: #718096;
     line-height: 50px;
+
 }
 
 .col-10 {

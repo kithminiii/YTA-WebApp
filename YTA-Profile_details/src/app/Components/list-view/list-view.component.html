@@ -1,9 +1,8 @@
-  <div class="row">
-    <div class="col-sm-12">
-
-      <div class="navbar-main">
-          <app-navbar></app-navbar>
-      </div>
+  <div class="row" >
+    <div class="navbar-main">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col-sm-12" *ngIf="isLoggedIn">
       <div>
           <nav aria-label="breadcrumb" class="title">
               <ol class="breadcrumb">
@@ -90,96 +89,6 @@
                   </div>
                 </td>
               </tr>
-              <!--<tr class="t-data">
-                <td class="name-d">
-                  <div class="row">
-                    <div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name2.png" />
-                    </div>
-                    <div class="col-10">Alexa Liras</div>
-                  </div>
-                </td>
-                <td class="function-d">Programmer</td>
-                <td class="review-d">
-                    <div class="status-dot-positive"></div>
-                    <p class="status-text">Positive</p>
-                </td>
-                <td class="email-d">esthera@simmmple.com</td>
-                <td class="edate-d">14/06/21</td>
-                <td class="id-d">32124</td>
-              </tr>
-              <tr class="t-data">
-                <td class="name-d">
-                  <div class="row">
-                    <div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name3.png" />
-                    </div>
-                    <div class="col-10">Laurent Michael</div>
-                  </div>
-                </td>
-                <td class="function-d">Executive</td>
-                <td class="review-d">
-                  <div class="status-dot-neutral"></div>
-                  <p class="status-text">Neutral</p>
-                </td>
-                <td class="email-d">esthera@simmmple.com</td>
-                <td class="edate-d">14/06/21</td>
-                <td class="id-d">32124</td>
-              </tr>
-              <tr class="t-data">
-                <td class="name-d">
-                  <div class="row">
-                    <div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name4.png" />
-                    </div>
-                    <div class="col-10">Freduardo Hill</div>
-                  </div>
-                </td>
-                <td class="function-d">Manager</td>
-                <td class="review-d">
-                      <div class="status-dot-positive"></div>
-                      <p class="status-text">Positive</p>
-                </td>
-                <td class="email-d">esthera@simmmple.com</td>
-                <td class="edate-d">14/06/21</td>
-                <td class="id-d">32124</td>
-              </tr>
-              <tr class="t-data">
-                <td class="name-d">
-                  <div class="row">
-                    <div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name5.png" />
-                    </div>
-                    <div class="col-10">Daniel Thomas</div>
-                  </div>
-                </td>
-                <td class="function-d">Programmer</td>
-                <td class="review-d">
-                  <div class="status-dot-negative"></div>
-                  <p class="status-text">Negative</p>
-                </td>
-                <td class="email-d">esthera@simmmple.com</td>
-                <td class="edate-d">14/06/21</td>
-                <td class="id-d">32124</td>
-              </tr>
-              <tr class="t-data">
-                <td class="name-d">
-                  <div class="row">
-                    <div class="col-2 mt-7">
-                      <img class="user" src="../../../assets/Images/name6.png" />
-                    </div>
-                    <div class="col-10">Mark Wilson</div>
-                  </div>
-                </td>
-                <td class="function-d">Designer</td>
-                <td class="review-d">
-                  <div class="status-dot-positive"></div>
-                  <p class="status-text">Positive</p>
-                </td>
-                <td class="email-d">esthera@simmmple.com</td>
-                <td class="edate-d">14/06/21</td>
-                <td class="id-d">32124</td>
-              </tr>-->
             </tbody>
           </table>
         </div>
@@ -195,30 +104,9 @@
 
   <!--<div>
     <div>
-      <h4>People List</h4>
-      <ul>
-        <li
-          class="list-group-item"
-          *ngFor="let tutorial of tutorials; let i = index"
-          [class.active]="i == currentIndex"
-          (click)="setActiveTutorial(tutorial, i)"
-        >
-          {{ tutorial.first }}
-        </li>
-        <li
-          class="list-group-item"
-          *ngFor="let tutorial of tutorials; let i = index"
-          [class.active]="i == currentIndex"
-          (click)="setActiveTutorial(tutorial, i)"
-        >
-          {{ tutorial.last }}
-        </li>
-      </ul>
-    </div>
-    <div>
       <app-people
         [viewMode]="true"
-        [currentTutorial]="currentTutorial"
+        [currentPeople]="currentPeople"
       ></app-people>
     </div>
   </div>-->

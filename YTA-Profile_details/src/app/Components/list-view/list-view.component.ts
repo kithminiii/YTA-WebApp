@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Details } from 'src/app/models/details.model';
 import { DetailsService } from 'src/app/services/details.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-list-view',
@@ -9,15 +10,18 @@ import { DetailsService } from 'src/app/services/details.service';
 })
 export class ListViewComponent implements OnInit {
 
+  isLoggedIn = false;
+
   peoples?: Details[];
   currentPeople: Details = {};
   currentIndex = -1;
   first = '';
 
-  constructor(private peopleService: DetailsService) { }
+  constructor(private peopleService: DetailsService, private storageService: StorageService) { }
 
   ngOnInit(): void {
     this.retrievePeoples();
+    this.isLoggedIn = this.storageService.isLoggedIn();
   }
 
   retrievePeoples(): void {

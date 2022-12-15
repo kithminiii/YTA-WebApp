@@ -45,6 +45,20 @@ input[type="search"] {
     color: #718096;
 }
 
+.nav ul li {
+  display:none;
+  float:left;
+}
+
+.nav li ul li {
+  width:100%;
+  border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+.nav li:hover ul {
+  display:block;
+}
+
 .signin-text{
     font-family: 'Helvetica';
     font-style: normal;

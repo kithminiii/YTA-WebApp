@@ -9,7 +9,6 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavbarComponent {
 
-  private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
@@ -37,7 +36,7 @@ export class NavbarComponent {
       }
     });
 
-    window.location.reload();
+    window.location.href = 'login';
   }
 
 }

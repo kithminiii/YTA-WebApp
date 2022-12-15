@@ -16,7 +16,7 @@
   </ul>
 </div> -->
 
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+<div *ngIf="isLoggedIn" class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
   <div class="logo-container">
       <button class="logo" (click)="toggleCollapse()">
         <img src="assets/Icons/logo.png">

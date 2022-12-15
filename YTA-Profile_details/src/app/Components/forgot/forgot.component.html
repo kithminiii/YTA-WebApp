@@ -1,0 +1,74 @@
+<div class="navbar-main">
+  <app-navbar></app-navbar>
+</div>
+<div class="row mt-4">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="logo" src="../../../assets/Images/logo.jpg" />
+          <form
+            *ngIf="!isLoggedIn"
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate
+            class="row g-3 login-form"
+          >
+            <button class="title" routerLink="/login"><i class="arrow left"></i>Back to login</button>
+            <h6>Enter the email address associated with your account and we'll send you a link to reset your password.</h6>
+            <div class="col-12">
+              <label class="l-email">Email</label>
+              <input
+                type="email"
+                class="form-control signup-form-inp"
+                name="username"
+                [(ngModel)]="form.username"
+                required
+                #username="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+              />
+              <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+                Username is required!
+              </div>
+            </div>
+            <!--<div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                [(ngModel)]="form.username"
+                required
+                #username="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+              />
+              <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+                Username is required!
+              </div>
+            </div>-->
+            <div class="d-grid gap-2">
+              <button class="btn btn-danger">
+                Continue
+              </button>
+              <p class="txt">Don't have an account? <a routerLink="/signup" class="login"> Sign Up </a></p>
+            </div>
+            <div class="form-group">
+              <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
+                Login failed: {{ errorMessage }}
+              </div>
+            </div>
+          </form>
+
+          <!--<div class="alert alert-success" *ngIf="isLoggedIn">
+            Logged in as {{ username }}.
+          </div>-->
+        </div>
+        <div class="col-md-6">
+          <img class="login-img" src="../../../assets/Images/Image.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

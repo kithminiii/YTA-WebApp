@@ -9,6 +9,7 @@ import { ListViewComponent } from './Components/list-view/list-view.component';
 import { LoginComponent } from './Components/login/login.component';
 import { DeactiveComponent } from './Components/deactive/deactive.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { ForgotComponent } from './Components/forgot/forgot.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,9 @@ const routes: Routes = [
   {path:'list-view-active',component:ListViewComponent},
   {path:'login',component:LoginComponent},
   {path:'list-view-deactive',component:DeactiveComponent},
-  {path:'signup', component:SignupComponent}
+  {path:'signup', component:SignupComponent},
+  {path:'forgot', component:ForgotComponent}
+
 ];
 
 @NgModule({

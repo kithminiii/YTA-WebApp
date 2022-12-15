@@ -3,11 +3,12 @@ import { AuthService } from 'src/app/services/auth.service';
 import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-forgot',
+  templateUrl: './forgot.component.html',
+  styleUrls: ['./forgot.component.css']
 })
-export class LoginComponent implements OnInit {
+export class ForgotComponent implements OnInit {
+
   form: any = {
     username: null,
     password: null
@@ -52,5 +53,6 @@ export class LoginComponent implements OnInit {
   reloadPage(): void {
     window.location.href = 'list-view-active';
   }
+
 
 }

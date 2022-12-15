@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Details } from 'src/app/models/details.model';
 import { DetailsService } from 'src/app/services/details.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-people',
@@ -9,6 +10,8 @@ import { DetailsService } from 'src/app/services/details.service';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
+
+  isLoggedIn = false;
 
   @Input() viewMode = false;
 
@@ -30,13 +33,15 @@ export class PeopleComponent implements OnInit {
   constructor(
     private peopleService: DetailsService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private storageService: StorageService) { }
 
   ngOnInit(): void {
     if (!this.viewMode) {
       this.message = '';
       this.getPeople(this.route.snapshot.params["id"]);
     }
+    this.isLoggedIn = this.storageService.isLoggedIn();
   }
 
   getPeople(id: string): void {

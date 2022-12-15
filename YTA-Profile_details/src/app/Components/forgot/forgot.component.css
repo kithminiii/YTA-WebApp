@@ -13,9 +13,28 @@
   margin-bottom: 30px;
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 1px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 10px;
+}
+
 .title {
-  font-weight: bolder;
-  font-size: 30px;
+  text-align: left;
+  font-weight: 500px;
+  font-size: 18px;
+  width: 145px;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 30px;
 }
 
 #btn {
@@ -26,7 +45,9 @@
 }
 
 .btn-danger{
-  border-radius: 25px;
+  height: 50px;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .text {
@@ -35,15 +56,15 @@
 }
 
 .signup-form-inp {
-  border-radius: 25px;
+  height: 50px;
   border-style: solid;
+  border: 1px solid #000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
 }
 
-input[type=email]:focus,
-input[type=password]:focus {
+input[type=email]:focus {
   border: 3px solid #ff0030;
 }
 
@@ -51,7 +72,7 @@ input[type=password]:focus {
   margin-left: 150px;
   align-items: center;
   margin-bottom: 70px;
-  width: 350px;
+  width: 450px;
 }
 
 #link {
@@ -87,8 +108,12 @@ input[type=password]:focus {
 }
 
 h6 {
-  text-align: center;
-  color: #b7b7b7;
+  text-align: left;
+  color: #878e97;
+}
+
+.l-email{
+  margin-bottom: 10px;
 }
 
 .login {
@@ -97,9 +122,10 @@ h6 {
 }
 
 .txt {
-  color: #000;
+  color: #878e97;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 80px;
+  text-align: center;
 }
 
 .btn-outline-danger

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Details } from 'src/app/models/details.model';
 import { DetailsService } from 'src/app/services/details.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 
 @Component({
@@ -10,15 +11,18 @@ import { DetailsService } from 'src/app/services/details.service';
 })
 export class DeactiveComponent implements OnInit {
 
+  isLoggedIn = false;
+
   peoples?: Details[];
   currentPeople: Details = {};
   currentIndex = -1;
   first = '';
 
-  constructor(private peopleService: DetailsService) { }
+  constructor(private peopleService: DetailsService, private storageService: StorageService) { }
 
   ngOnInit(): void {
     this.retrievePoeples();
+    this.isLoggedIn = this.storageService.isLoggedIn();
   }
 
   retrievePoeples(): void {

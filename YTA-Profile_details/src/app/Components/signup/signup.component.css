@@ -26,6 +26,10 @@
   border-radius: 1;
 }
 
+::placeholder {
+  font-weight: 100;
+}
+
 .signup-text {
   font-weight: 900;
 }

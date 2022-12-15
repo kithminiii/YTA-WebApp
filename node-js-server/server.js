@@ -2,8 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const cookieSession = require("cookie-session");
 
-const dbConfig = require("./app/config/db.config");
-
 const app = express();
 
 var corsOptions = {
@@ -31,12 +29,12 @@ const db = require("./app/models");
 const Role = db.role;
 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+.connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log("Successfully connect to MongoDB.");
+    console.log("Successfully connect to Database.");
     initial();
   })
   .catch(err => {
@@ -46,7 +44,7 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to YTA application." });
 });
 
 // routes

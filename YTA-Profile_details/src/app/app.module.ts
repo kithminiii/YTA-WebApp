@@ -18,6 +18,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { LoginComponent } from './Components/login/login.component';
 import { DeactiveComponent } from './Components/deactive/deactive.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { ForgotComponent } from './Components/forgot/forgot.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SignupComponent } from './Components/signup/signup.component';
     NavbarComponent,
     LoginComponent,
     DeactiveComponent,
-    SignupComponent
+    SignupComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,

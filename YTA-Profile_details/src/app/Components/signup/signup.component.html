@@ -43,7 +43,7 @@
                     <div class="col-md-6">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control signup-form-inp"
                         name="lname"
                         placeholder="Last Name*"
                         [(ngModel)]="form.lname"
@@ -60,7 +60,7 @@
                     <div class="col-12">
                       <input
                         type="email"
-                        class="form-control"
+                        class="form-control signup-form-inp"
                         name="email"
                         placeholder="Email*"
                         [(ngModel)]="form.email"
@@ -79,7 +79,7 @@
                     <div class="col-12">
                       <input
                         type="password"
-                        class="form-control"
+                        class="form-control signup-form-inp"
                         name="password"
                         placeholder="Password*"
                         [(ngModel)]="form.password"
@@ -105,9 +105,9 @@
                     </div>
                   </form>
 
-                  <div class="alert alert-success" *ngIf="isSuccessful">
+                  <!--<div class="alert alert-success" *ngIf="isSuccessful">
                     Your registration is successful!
-                  </div>
+                  </div>-->
               </div>
               <div class="col-md-6 right-signup">
                 <img class="signupimg" src="../../../assets/signup-img.png">
