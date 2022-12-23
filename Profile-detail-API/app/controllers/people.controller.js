@@ -22,6 +22,7 @@ exports.create = (req, res) => {
     lang: req.body.lang,
     department: req.body.department,
     linemanager: req.body.linemanager,
+    eStatus: req.body.eStatus,
     published: req.body.published ? req.body.published : false
   });
 

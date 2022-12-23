@@ -36,7 +36,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)"><img [src]="people.imagePath" class="user"/>{{ people.first }} {{ people.last }}
+                      ><img [src]="people.imagePath" class="user"/>{{ people.first }} {{ people.last }}
                     </div>
                   </div>
                 </td>
@@ -44,7 +44,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)">{{ people.function }}
+                      >{{ people.function }}
                     </div>
                   </div>
                 </td>
@@ -52,7 +52,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)">{{ people.department }}
+                      >{{ people.department }}
                     </div>
                   </div>
                 </td>
@@ -60,7 +60,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)">{{ people.linemanager }}
+                      >{{ people.linemanager }}
                     </div>
                   </div>
                 </td>
@@ -68,7 +68,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)">{{ people.email }}
+                      >{{ people.email }}
                     </div>
                   </div>
                 </td>
@@ -76,7 +76,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)">{{ people.pno }}
+                      >{{ people.pno }}
                     </div>
                   </div>
                 </td>
@@ -84,7 +84,7 @@
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
-                      (click)="setActivePeople(people, i)"><button class="btn btn-view" routerLink="/people/{{ currentPeople.id }}">View Details</button>
+                      ><button class="btn btn-view" (click)="setActivePeople(people, i)" routerLink="/people/{{ currentPeople.id }}">View Details</button>
                     </div>
                   </div>
                 </td>

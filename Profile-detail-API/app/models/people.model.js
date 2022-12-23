@@ -11,7 +11,8 @@ module.exports = mongoose => {
       pno: String,
       department: String,
       linemanager: String,
-      published: Boolean,
+      eStatus: String,
+      //published: Boolean,
     },
     { timestamps: true }
   );

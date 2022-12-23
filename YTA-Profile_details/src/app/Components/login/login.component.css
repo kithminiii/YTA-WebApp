@@ -41,11 +41,11 @@
   transition: 0.5s;
   outline: none;
 }
-
+/*
 input[type=email]:focus,
 input[type=password]:focus {
   border: 3px solid #ff0030;
-}
+}*/
 
 .login-form {
   margin-left: 150px;

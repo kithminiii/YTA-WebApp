@@ -13,4 +13,5 @@ export class Details {
   department?: string;
   linemanager?: string;
   imagePath?: string;
+  eStatus?: string;
 }

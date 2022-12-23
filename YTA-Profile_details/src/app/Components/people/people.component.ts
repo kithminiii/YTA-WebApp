@@ -25,7 +25,8 @@ export class PeopleComponent implements OnInit {
     linemanager: '',
     pno: '',
     function: '',
-    imagePath: ''
+    imagePath: '',
+    eStatus: ''
   };
 
   message = '';

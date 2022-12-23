@@ -10,6 +10,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { DeactiveComponent } from './Components/deactive/deactive.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { ForgotComponent } from './Components/forgot/forgot.component';
+import { ProfileViewComponent } from './Components/people/profile-view/profile-view.component';
 
 
 const routes: Routes = [
