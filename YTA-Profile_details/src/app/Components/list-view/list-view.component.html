@@ -1,27 +1,37 @@
-  <div class="row" >
+  <div class="row">
     <div class="navbar-main">
       <app-navbar></app-navbar>
     </div>
     <div class="col-sm-12" *ngIf="isLoggedIn">
       <div>
-          <nav aria-label="breadcrumb" class="title">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Employees</li>
-                <li class="breadcrumb-item">People</li>
-              </ol>
-          </nav>
+        <nav aria-label="breadcrumb" class="title">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Employees</li>
+            <li class="breadcrumb-item">People</li>
+          </ol>
+        </nav>
 
-          <p class="people-text">People</p>
-          <button type="button" class="btn btn-active">ACTIVE</button>
-          <button type="button" class="btn btn-deactive" routerLink="/list-view-deactive">DEACTIVATED</button>
+        <p class="people-text">People</p>
+        <!--<button type="button" class="btn btn-active">ACTIVE</button>
+        <button type="button" class="btn btn-deactive" routerLink="/list-view-deactive">DEACTIVATED</button>-->
       </div>
 
       <div class="card text-center">
+        <div class="col-md-8">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="first" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="searchTitle()">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="card-body">
           <table class="table">
-            <thead>
+            <!--<thead>
               <tr class="tr-d">
-                <th>NAME</th>
+                <td>NAME</td>
                 <th>Job Title</th>
                 <th>DEPARTMENT</th>
                 <th>LINE MANAGER</th>
@@ -29,18 +39,33 @@
                 <th>TELEPHONE</th>
                 <th></th>
               </tr>
-            </thead>
-            <tbody>
+            </thead>-->
+            <!--<tbody> -->
               <tr class="t-data">
-                <td class="name-d">
-                  <div class="detail">
-                    <div class="col-10" *ngFor="let people of peoples; let i = index"
-                      [class.active]="i == currentIndex"
-                      ><img [src]="people.imagePath" class="user"/>{{ people.first }} {{ people.last }}
+                <td>
+                  <div id="box4">
+                    <div class="profile-sections">
+                      <ul><button class="but"><i class="fa fa-rocket"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-file"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-cube"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-user"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-user"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-bell"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-wrench"></i></button></ul>
+                      <ul><button class="but"><i class="fa fa-times-circle"></i></button></ul>
                     </div>
                   </div>
                 </td>
                 <td class="name-d">
+                  <div class="detail">
+                    <div class="col-10" *ngFor="let people of peoples; let i = index"
+                      [class.active]="i == currentIndex"
+                      (click)="setActivePeople(people, i)"
+                      ><img [src]="people.imagePath" class="user"/>{{ people.first }} {{ people.last }}
+                    </div>
+                  </div>
+                </td>
+                <!--<td class="name-d">
                   <div class="detail">
                     <div class="col-10" *ngFor="let people of peoples; let i = index"
                       [class.active]="i == currentIndex"
@@ -87,28 +112,27 @@
                       ><button class="btn btn-view" (click)="setActivePeople(people, i)" routerLink="/people/{{ currentPeople.id }}">View Details</button>
                     </div>
                   </div>
-                </td>
+                </td>-->
               </tr>
-            </tbody>
+            <!--</tbody> -->
           </table>
         </div>
       </div>
-    </div>
-    <!--<div>
+      <div>
       <app-people
         [viewMode]="true"
         [currentPeople]="currentPeople"
       ></app-people>
-    </div>-->
+    </div>
+    </div>
+
   </div>
 
   <!--<div>
-    <div>
-      <app-people
-        [viewMode]="true"
-        [currentPeople]="currentPeople"
-      ></app-people>
-    </div>
+    <app-people
+      [viewMode]="true"
+      [currentPeople]="currentPeople"
+    ></app-people>
   </div>-->
 
 

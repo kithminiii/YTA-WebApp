@@ -1,12 +1,12 @@
     <!-- Profile Details view Form-->
-    <div class="navbar-main">
+    <!--<div class="navbar-main">
       <app-navbar></app-navbar>
-    </div>
+    </div>-->
 
     <div class="box-wrapper" *ngIf="viewMode; else editable">
       <div id="box3" *ngIf="currentPeople.id" >
 
-        <div id="box4">
+        <!--<div id="box4">
           <div class="profile-sections">
             <ul><button class="but"><i class="fa fa-rocket"></i>Basic Info</button></ul>
             <ul><button class="but"><i class="fa fa-file"></i>Salary Info</button></ul>
@@ -17,7 +17,7 @@
             <ul><button class="but"><i class="fa fa-wrench"></i>Employment Timeline</button></ul>
             <ul><button class="but"><i class="fa fa-times-circle"></i>Payroll History</button></ul>
           </div>
-        </div>
+        </div>-->
 
         <div class="middle-column">
           <div id="box5">
@@ -31,12 +31,12 @@
           </div>
 
           <div id="box6" >
-            <h3 class="basic">Basic Info <button class="btn btn-active" routerLink="/people/{{ currentPeople.id }}">
+            <!--<h3 class="basic">Basic Info <button class="btn btn-active" routerLink="/people/{{ currentPeople.id }}">
               Edit
-            </button></h3>
-            <table class="info" >
+            </button></h3>-->
+            <!--<table class="info" >
               <tr>
-                <td class="txt">First Name</td>
+                <td class="txt">Full Name</td>
                 <td class="txt">Last Name</td>
               </tr>
               <tr>
@@ -67,6 +67,61 @@
                 <td><label class="inp">{{ currentPeople.location }}</label></td>
                 <td><label class="inp">{{ currentPeople.pno }}</label></td>
               </tr>
+              <tr>
+                <td class="txt">Status</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.eStatus }}</label></td>
+              </tr>
+              <button class="btn btn-success">Submit</button>
+            </table>-->
+
+            <table class="info">
+              <h3 class="basic">Basic Information <i class="fa fa-check">
+                {{ currentPeople.eStatus }}
+                </i></h3>
+              <tr>
+                <td class="txt">Full Name</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.first }} {{ currentPeople.last }}</label></td>
+              </tr>
+              <tr>
+                <td class="txt">I'm</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.im }}</label></td>
+              </tr>
+              <tr>
+                <td class="txt">Birth Date</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.birth }}</label></td>
+              </tr>
+              <tr>
+                <td class="txt">Email Address</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.email }}</label></td>
+              </tr>
+              <tr>
+                <td class="txt">Your Location</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.location }}</label></td>
+              </tr>
+              <tr>
+                <td class="txt">Phone Number</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.pno }}</label></td>
+              </tr>
+              <tr>
+                <td class="txt">Status</td>
+              </tr>
+              <tr>
+                <td><label class="inp">{{ currentPeople.eStatus }}</label></td>
+              </tr>
               <!--<button class="btn btn-success">Submit</button>-->
             </table>
 
@@ -78,6 +133,19 @@
             </div>-->
           </div>
         </div>
+
+        <!--<div id="box4">
+          <div class="profile-sections">
+            <ul><button class="but"><i class="fa fa-rocket"></i>Basic Info</button></ul>
+            <ul><button class="but"><i class="fa fa-file"></i>Salary Info</button></ul>
+            <ul><button class="but"><i class="fa fa-cube"></i>Job Description</button></ul>
+            <ul><button class="but"><i class="fa fa-user"></i>KPIs</button></ul>
+            <ul><button class="but"><i class="fa fa-user"></i>Appraisals</button></ul>
+            <ul><button class="but"><i class="fa fa-bell"></i>Leave</button></ul>
+            <ul><button class="but"><i class="fa fa-wrench"></i>Employment Timeline</button></ul>
+            <ul><button class="but"><i class="fa fa-times-circle"></i>Payroll History</button></ul>
+          </div>
+        </div>-->
       </div>
     </div>
 
@@ -200,7 +268,7 @@
                   /></td>
                 </tr>
                 <tr>
-                  <td class="txt">Your Location</td>
+                  <td class="txt">Status</td>
                 </tr>
                 <tr>
                   <td>

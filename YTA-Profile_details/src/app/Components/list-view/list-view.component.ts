@@ -45,4 +45,18 @@ export class ListViewComponent implements OnInit {
     this.currentPeople = people;
     this.currentIndex = index;
   }
+
+  searchTitle(): void {
+    this.currentPeople = {};
+    this.currentIndex = -1;
+
+    this.peopleService.findByTitle(this.first)
+      .subscribe({
+        next: (data) => {
+          this.peoples = data;
+          console.log(data);
+        },
+        error: (e) => console.error(e)
+      });
+  }
 }

@@ -3,8 +3,9 @@
     background: #FFFFFF;
     box-shadow: none;
     border-radius: 16px;
-    width: 100%;
+    width: 30%;
     border-color: #FFFFFF;
+    float: right;
 }
 
 .people-text{
@@ -67,6 +68,55 @@
     text-align: left;
 }
 
+/* icons */
+#box4 {
+  flex-grow: 1;
+  border-radius: 16px;
+  height: 428px;
+  width: 40px;
+  background-color: #FFFFFF;
+}
+
+.profile-sections {
+  text-align: left;
+  margin-top: 40px;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+}
+
+.but {
+  display: flex;
+  align-items: center;
+
+  /* Gray/Gray-500 */
+  border: none;
+
+  width: 30px;
+  height: 30px;
+  background: #a3a3a3;
+  border-radius: 12px;
+  margin-left: -20px;
+}
+
+.but i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding-left: 8px;
+}
+
+.but:hover{
+  background-color: #FF0030;
+}
+
+/* details */
+
 .name-d{
     font-family: 'Helvetica';
     font-style: normal;
@@ -75,7 +125,6 @@
     line-height: 140%;
     color: #718096;
     line-height: 50px;
-
 }
 
 .col-10 {
